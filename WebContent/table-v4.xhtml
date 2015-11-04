@@ -23,7 +23,7 @@
 							completeMethod="#{bean.completeX}" dropdown="true"
 							forceSelection="true">
 							<p:ajax event="change" listener="#{bean.onCellEdit}"
-								update="calcCellOutputId" />
+								update="@this calcCellOutputId" />
 						</p:autoComplete>
 					</f:facet>
 				</p:cellEditor>
@@ -38,7 +38,7 @@
 							completeMethod="#{bean.completeX}" dropdown="true"
 							forceSelection="true">
 							<p:ajax event="change" listener="#{bean.onCellEdit}"
-								update="calcCellOutputId" />
+								update="@this calcCellOutputId" />
 						</p:autoComplete>
 					</f:facet>
 				</p:cellEditor>
