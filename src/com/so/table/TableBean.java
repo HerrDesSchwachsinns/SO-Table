@@ -45,13 +45,21 @@ public class TableBean implements Serializable {
 		return values;
 	}
 
+	public List<Integer> complete(String query) {
+		int cur = 0;
+		try {
+			cur = Integer.parseInt(query);
+		} catch (NumberFormatException ex) {
+
+		}
+		return IntStream.range(cur, cur + 10).boxed().collect(Collectors.toList());
+	}
+
 	public List<Integer> completeX(String query) {
-		int cur = Integer.parseInt(query);
-		return IntStream.range(cur, cur+10).boxed().collect(Collectors.toList());
+		return complete(query);
 	}
 
 	public List<Integer> completeY(String query) {
-		int cur = Integer.parseInt(query);
-		return IntStream.range(cur, cur+10).boxed().collect(Collectors.toList());
+		return complete(query);
 	}
 }
