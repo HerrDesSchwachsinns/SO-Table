@@ -9,6 +9,7 @@
 </h:head>
 <h:body>
 	<h:outputStylesheet library="css" name="table.css" />
+	<h:link value="index" outcome="index" />
 	<h:form id="formId">
 		<p:remoteCommand name="onCellEdit"
 			update=":#{p:component('valueTableId')}" />
