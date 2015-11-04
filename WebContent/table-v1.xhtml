@@ -14,9 +14,9 @@
 		<p:remoteCommand name="onCellEdit"
 			update=":#{p:component('valueTableId')}" />
 		<p:dataTable id="valueTableId" var="values"
-			value="#{tableBean.values}" editable="true" editMode="cell"
+			value="#{bean.values}" editable="true" editMode="cell"
 			tabindex="100">
-			<p:ajax event="cellEdit" listener="#{tableBean.onCellEdit}"
+			<p:ajax event="cellEdit" listener="#{bean.onCellEdit}"
 				oncomplete="onCellEdit()"
 				update="@this, :#{p:component('valueTableId')}" />
 			<p:column headerText="x" id="xCellId">

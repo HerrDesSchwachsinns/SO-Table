@@ -12,7 +12,7 @@ import javax.faces.bean.ViewScoped;
 
 import com.so.table.Values;
 
-@ManagedBean
+@ManagedBean(name = "bean")
 @ViewScoped
 public class TableBean implements Serializable {
 

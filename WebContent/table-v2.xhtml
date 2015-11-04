@@ -12,7 +12,7 @@
 	<h:link value="index" outcome="index" />
 	<h:form id="formId">
 		<p:dataTable id="valueTableId" var="values"
-			value="#{tableBean.values}" editable="true" editMode="cell">
+			value="#{bean.values}" editable="true" editMode="cell">
 			<p:column headerText="x" id="xCellId">
 				<p:cellEditor>
 					<f:facet name="output">
@@ -20,7 +20,7 @@
 					</f:facet>
 					<f:facet name="input">
 						<p:inputText value="#{values.x}">
-							<p:ajax event="change" listener="#{tableBean.onCellEdit}"
+							<p:ajax event="change" listener="#{bean.onCellEdit}"
 								update="calcCellOutputId" />
 						</p:inputText>
 					</f:facet>
@@ -33,7 +33,7 @@
 					</f:facet>
 					<f:facet name="input">
 						<p:inputText value="#{values.y}">
-							<p:ajax event="change" listener="#{tableBean.onCellEdit}"
+							<p:ajax event="change" listener="#{bean.onCellEdit}"
 								update="calcCellOutputId" />
 						</p:inputText>
 					</f:facet>
