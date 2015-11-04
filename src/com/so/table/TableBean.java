@@ -46,10 +46,12 @@ public class TableBean implements Serializable {
 	}
 
 	public List<Integer> completeX(String query) {
-		return IntStream.range(0, 10).boxed().collect(Collectors.toList());
+		int cur = Integer.parseInt(query);
+		return IntStream.range(cur, cur+10).boxed().collect(Collectors.toList());
 	}
 
 	public List<Integer> completeY(String query) {
-		return IntStream.range(0, 10).boxed().collect(Collectors.toList());
+		int cur = Integer.parseInt(query);
+		return IntStream.range(cur, cur+10).boxed().collect(Collectors.toList());
 	}
 }
